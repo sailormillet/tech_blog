@@ -8,6 +8,7 @@
     "build:watch": "webpack --config webpack.config.watch.js",
     "dev:reload": "webpack-dev-server --config webpack.config.reload.js",
     "dev:hmr": "webpack-dev-server --config webpack.config.hmr.js",
+    "dev:hmr2": "webpack-dev-server --config webpack.config.hmr2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
