@@ -1,6 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+
 module.exports = {
     mode: 'none',
     entry: {
@@ -29,6 +31,9 @@ module.exports = {
         //     filename: 'template/index.html',
         //     chunks: ['app']
         // })
+        new ScriptExtHtmlWebpackPlugin({
+            inline: /runtime~.+\.js$/  //正则匹配runtime文件名
+        }),
         new HtmlWebpackPlugin()
     ],
     optimization: {
